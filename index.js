@@ -146,11 +146,11 @@ function Reporter(runner, mochaOptions) {
 
     that.indentation = 0;
 
+    if(failures.length) that.writeFailures(failures);
+    
     if(!that.options.hideTitles) {
       that.writeLine();
     }
-
-    if(failures.length) that.writeFailures(failures);
     
     if(!that.options.hideStats) {
       that.writeStat(stats);
