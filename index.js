@@ -150,11 +150,11 @@ function Reporter(runner, mochaOptions) {
       that.writeLine();
     }
 
+    if(failures.length) that.writeFailures(failures);
+    
     if(!that.options.hideStats) {
       that.writeStat(stats);
     }
-
-    if(failures.length) that.writeFailures(failures);
   });
 }
 
